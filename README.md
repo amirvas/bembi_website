@@ -1,4 +1,3 @@
-# bembi_website
-Десктоп
+для десктопа
 
 html/scss/js/php
