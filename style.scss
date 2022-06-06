@@ -1,0 +1,930 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1376px;
+  margin: 0 auto;
+}
+
+// vars
+$blue: #82ACFF;
+$blue-light: #AEDEFF;
+$blue-dark: #052A74;
+$yellow: #FEE790;
+$pink: #FF5D9E;
+
+
+// fonts
+
+@font-face {
+  font-family: 'base-400';
+  src: url(fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'base-500';
+  src: url(fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'base-700';
+  src: url(fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'kids';
+  src: url(fonts/Neucha.woff2);
+}
+
+
+//index
+header {
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+
+    .navigation {
+      display: flex;
+      margin: 32px 0;
+      align-items: center;
+
+      img {
+        padding-right: 32px;
+      }
+
+      a {
+        font-family: 'base-400';
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+        text-decoration: none;
+
+        margin-right: 32px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .contacts {
+        padding-right: 0;
+      }
+    }
+
+    .call {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin: 32px 0px 32px 0;
+
+      text-align: end;
+      vertical-align: middle;
+
+      p {
+        font-family: 'base-400';
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+
+        margin-right: 32px;
+        display: block;
+      }
+
+      a {
+        width: 179px;
+        height: 48px;
+        background: $blue;
+        border-radius: 100px;
+
+        display: inline-block;
+
+        text-decoration: none;
+
+        div {
+          display: flex;
+          position: relative;
+
+          svg {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+          }
+
+          .btn-title {
+            font-family: 'base-400';
+            font-size: 18px;
+            line-height: 24px;
+            color: #fff;
+
+            text-align: center;
+            margin: auto;
+
+            padding-top: 12px;
+          }
+        }
+
+        &:hover {
+          background: #4584FF;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .main-inner-form {
+    background: url(img/base.jpg) no-repeat;
+    height: 800px;
+    background-size: 100% 100%;
+
+    position: relative;
+
+    margin-bottom: 100px;
+
+    form {
+      height: 700px;
+      max-width: 500px;
+
+      background: #FFFFFF;
+      box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      bottom: 50px;
+
+      .form-title {
+        font-family: 'kids';
+        font-size: 68px;
+        line-height: 80px;
+        color: $pink;
+
+        padding: 46px 91px 0 90px;
+
+        span {
+          color: $blue;
+        }
+      }
+
+      .form-description {
+        font-family: 'base-400';
+        font-size: 24px;
+        line-height: 32px;
+        color: $blue-light;
+        text-align: center;
+
+        padding-bottom: 32px;
+      }
+
+      .form-text {
+        font-family: 'base-400';
+        text-align: center;
+
+        padding-bottom: 32px;
+
+        span {
+          color: $pink;
+        }
+      }
+
+      input {
+        display: block;
+        text-align: center;
+        align-self: center;
+
+        width: 329px;
+        height: 72px;
+        background: #FFFFFF;
+        box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        border: none;
+
+        margin: 0 auto;
+        margin-bottom: 32px;
+
+        font-family: 'base-400';
+        font-size: 18px;
+        line-height: 24px;
+
+        &::placeholder {
+          font-family: 'base-400';
+          font-size: 18px;
+          line-height: 24px;
+          color: #BFBFBF;
+
+          text-align: start;
+          padding-left: 32px;
+        }
+      }
+
+      button {
+        width: 329px;
+        height: 72px;
+        background: $pink;
+        box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        border: none;
+
+        font-family: 'base-700';
+        font-size: 18px;
+        line-height: 24px;
+        // text-align: center;
+        letter-spacing: 0.04em;
+
+        color: #FFFFFF;
+
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 24px;
+
+        cursor: pointer;
+
+        &:hover {
+          background: #ED3780;
+        }
+      }
+
+      .private-policy {
+        font-family: 'base-400';
+        font-size: 12px;
+        line-height: 16px;
+        color: #BFBFBF;
+
+        padding-left: 86px;
+
+        a {
+          color: #BFBFBF;
+        }
+      }
+    }
+  }
+
+  .benefits {
+    background-image: url(img/benef_bg.jpg);
+    height: 1100px;
+    background-size: 100% 100%;
+
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 80px;
+      text-align: center;
+
+      color: $blue;
+
+      padding-bottom: 40px;
+    }
+
+    .benefits-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {
+        width: 445px;
+        height: 440px;
+        background: #FFFFFF;
+        box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 24px;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 30px;
+
+        &-image {
+          padding: 40px;
+          align-self: center;
+        }
+
+        &-title {
+          font-family: 'base-400';
+          font-size: 16px;
+          line-height: 24px;
+
+          padding: 0 0 1rem 50px;
+
+        }
+
+        &-list {
+          font-family: 'base-400';
+          font-size: 16px;
+          line-height: 24px;
+
+          padding: 0 0 0 65px;
+
+          list-style: disc;
+        }
+      }
+    }
+  }
+
+  .request {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px;
+
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 80px;
+      color: $pink;
+
+      padding-bottom: 32px;
+
+      span {
+        color: $blue
+      }
+    }
+
+    &-phone {
+      font-family: 'base-400';
+      font-size: 42px;
+      line-height: 50px;
+      color: $blue;
+
+      padding-bottom: 32px;
+    }
+  }
+
+  .slider {
+    position: relative;
+    height: 500px;
+
+    margin-bottom: 100px;
+
+    &-item {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    &-prev {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 25px;
+    }
+
+    &-next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 25px;
+
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+
+  .price {
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 80px;
+      text-align: center;
+      color: $blue;
+
+      margin-bottom: 107px;
+    }
+
+    &-branch {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {
+        width: 444px;
+        height: 200px;
+
+        margin-bottom: 80px;
+
+        &-title {
+          font-family: 'base-500';
+          font-size: 26px;
+          line-height: 32px;
+          color: $blue;
+
+          margin-bottom: 32px;
+        }
+
+        .service {
+          display: flex;
+          justify-content: space-between;
+
+          border-bottom: 0.5px solid #E5E5E5;
+
+          margin-bottom: 32px;
+
+          .title,
+          .price {
+            font-family: 'base-400';
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    .branch-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      margin-bottom: 150px;
+
+      .additionally {
+        width: 679px;
+        height: 480px;
+
+        &-title {
+          font-family: 'base-500';
+          font-size: 28px;
+          line-height: 32px;
+          color: $blue;
+
+          margin-bottom: 32px;
+        }
+
+        &-item-title {
+          font-family: 'base-400';
+          font-size: 16px;
+          line-height: 24px;
+
+          margin-bottom: 32px;
+        }
+
+        &-item-inner {
+          display: flex;
+          justify-content: space-between;
+
+          border-bottom: 0.5px solid #E5E5E5;
+
+          margin-bottom: 32px;
+
+          .title,
+          .price {
+            font-family: 'base-400';
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .branch-info-more {
+        width: 562px;
+        height: 200px;
+
+        .for-one {
+          margin-bottom: 100px;
+
+          &-title {
+            font-family: 'base-500';
+            font-size: 28px;
+            line-height: 32px;
+            color: $blue;
+
+            margin-bottom: 32px;
+          }
+
+          &-inner {
+            display: flex;
+            justify-content: space-between;
+
+            border-bottom: 0.5px solid #E5E5E5;
+
+            margin-bottom: 32px;
+
+            .title,
+            .price {
+              font-family: 'base-400';
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .day-off {
+          &-title {
+            font-family: 'base-500';
+            font-size: 28px;
+            line-height: 32px;
+            color: $blue;
+
+            margin-bottom: 32px;
+          }
+
+          &-text {
+            font-family: 'base-500';
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .branch {
+    margin-bottom: 150px;
+
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $blue;
+
+      margin-bottom: 32px;
+
+      span {
+        color: $pink
+      }
+    }
+
+    &-text {
+      font-family: 'base-400';
+      font-size: 24px;
+      line-height: 40px;
+      text-align: center;
+
+      margin-bottom: 70px;
+    }
+
+    &-location {
+      font-family: 'base-400';
+      font-size: 24px;
+      line-height: 32px;
+
+      margin-bottom: 40px;
+    }
+
+    &-group {
+      font-family: 'base-400';
+      font-size: 24px;
+      line-height: 32px;
+
+      margin-bottom: 40px;
+    }
+
+    &-group-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-bottom: 100px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        svg {
+          padding-right: 12px;
+        }
+
+        p {
+          font-family: 'base-400';
+          font-size: 24px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    &-photo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-bottom: 124px;
+
+      img {
+        padding-bottom: 32px;
+      }
+    }
+
+    &-btn {
+      text-align: center;
+
+      button {
+        width: 380px;
+        height: 72px;
+        background: $pink;
+        box-shadow: 4px 10px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        border: none;
+
+        font-family: 'base-700';
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: 0.04em;
+
+        &:hover {
+          background: #ED3780;
+        }
+      }
+    }
+  }
+
+  .steps {
+    margin-bottom: 150px;
+
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $blue;
+
+      margin-bottom: 100px;
+
+      span {
+        color: $pink;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      svg {
+        display: inline;
+      }
+
+      p {
+        font-family: 'base-400';
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+
+        height: 55px;
+      }
+    }
+  }
+
+  .feedback {
+    margin-bottom: 150px;
+
+    &-title {
+      font-family: 'kids';
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $blue;
+
+      margin-bottom: 100px;
+    }
+
+    .slider {
+      position: relative;
+      height: 500px;
+
+      margin-bottom: 100px;
+
+      &-item-fb {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+
+        position: absolute;
+        right: 200px;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      &-prev {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 25px;
+      }
+
+      &-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 25px;
+
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $blue-dark;
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 32px;
+
+    &-logo {
+      height: 96px;
+      width: 96px;
+    }
+
+    &-nav {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+
+        margin-bottom: 12px;
+      }
+
+      a {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        margin-bottom: 12px;
+      }
+    }
+
+    &-branches {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+
+        margin-bottom: 12px;
+      }
+
+      a {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        margin-bottom: 12px;
+      }
+    }
+
+    &-partnership {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+
+        margin-bottom: 12px;
+      }
+
+      a {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        margin-bottom: 12px;
+
+        span {
+          pointer-events: none;
+          cursor: default;
+          text-decoration: none;
+        }
+      }
+
+      .contact-us {
+        margin-bottom: 68px;
+      }
+
+      .private-policy {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+
+        margin-bottom: 12px;
+      }
+
+      &-phone {
+        display: flex;
+
+        svg {
+          padding-right: 15px;
+        }
+
+        p {
+          font-family: 'base-400';
+          font-size: 16px;
+          line-height: 24px;
+          color: #FFFFFF;
+
+          margin-bottom: 12px;
+        }
+      }
+
+      &-ad {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+
+        margin-top: 68px;
+        margin-bottom: 12px;
+      }
+
+      &-back {
+        font-family: 'base-400';
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+//thanks
+.main-note {
+  margin: 100px 0 300px 0;
+
+  &-str {
+    font-family: 'base-400';
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+
+    margin-bottom: 28px;
+  }
+}
